@@ -1,0 +1,68 @@
+# ==============================================================================
+# FINCORE — Root Git Ignore
+# ==============================================================================
+
+# Python & Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+backend/.venv/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+backend/app/**/__pycache__/
+backend/tests/**/__pycache__/
+backend/alembic/**/__pycache__/
+.pytest_cache/
+backend/.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Local Environment Variables & Secrets
+.env
+backend/.env
+frontend/.env.local
+frontend/.env.*.local
+*.local
+!*.env.example
+!backend/.env.example
+!.env.example
+
+# Local SQLite databases (if generated)
+*.db
+*.sqlite
+*.sqlite3
+backend/*.db
+
+# Node.js & Frontend Artifacts
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+frontend/.vite/
+frontend/node_modules/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Database Snapshots & Backups
+backups/
+*.dump
+*.sql
+
+# System & Editor Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

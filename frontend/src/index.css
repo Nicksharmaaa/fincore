@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* ── Colors ── */
+  --color-primary: #142D4E;
+  --color-primary-hover: #1D3D5C;
+  --color-primary-light: #E9F1F5;
+  --color-secondary: #1D3D5C;
+  --color-emerald: #16856D;
+  --color-emerald-hover: #0F6B57;
+  --color-emerald-light: #E8F5F2;
+  --color-surface: #E9F1F5;
+  --color-background: #F7F9FB;
+  --color-white: #FFFFFF;
+  --color-text-primary: #182536;
+  --color-text-secondary: #687788;
+  --color-border: #E2E8EF;
+  --color-border-focus: #142D4E;
+  --color-error: #C44545;
+  --color-error-light: #FDF2F2;
+  --color-warning: #C58A36;
+  --color-warning-light: #FDF7EE;
+  --color-success: #16856D;
+  --color-success-light: #E8F5F2;
+
+  /* ── Typography ── */
+  --font-heading: 'Manrope', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', monospace;
+
+  /* ── Font sizes ── */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
+  /* ── Spacing (8px base) ── */
+  --spacing: 0.25rem;
+
+  /* ── Border radius ── */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-DEFAULT: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-xs: 0 1px 2px rgba(20, 45, 78, 0.05);
+  --shadow-sm: 0 1px 3px rgba(20, 45, 78, 0.07), 0 1px 2px rgba(20, 45, 78, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(20, 45, 78, 0.07), 0 2px 4px -1px rgba(20, 45, 78, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(20, 45, 78, 0.08), 0 4px 6px -2px rgba(20, 45, 78, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(20, 45, 78, 0.10), 0 10px 10px -5px rgba(20, 45, 78, 0.04);
+  --shadow-inset: inset 0 1px 2px rgba(20, 45, 78, 0.06);
+}
+
+/* ── Base layer ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* Focus ring — global accessible focus style */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-md);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
